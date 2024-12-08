@@ -1,5 +1,6 @@
 import Header from './Header.jsx'
-// import Footer from './Footer.jsx'
+import Footer from './Footer.jsx'
+import Food from './Food.jsx'
 
 function App() {
  
@@ -8,7 +9,10 @@ function App() {
     //fragment
     <>
       <Header/>
-      {/* <Footer/> */}
+      <Food/>
+      {/*can multiply*/}
+      <Food/>
+      <Footer/>
     </>
     
   );
