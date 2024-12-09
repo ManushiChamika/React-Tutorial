@@ -22,13 +22,14 @@ function UserGreeting(props){
 }
 
 //default props
-UserGreeting.PropTypes = {
+UserGreeting.propTypes = {
     isLoggedIn: PropTypes.bool,
     username: PropTypes.string,
+};
 
-}
-UserGreeting.default.props = {
+UserGreeting.defaultProps = {
     isLoggedIn: false,
-    username: "Guest"
-}
+    username: "Guest",
+};
+
 export default UserGreeting;
