@@ -8,6 +8,15 @@ import Button1 from './Button1.jsx'
 //              3.Modules
 //              3.Inline css
 
+
+//------------------------------------------------------------------
+//props are used to pass data from parent to child components
+//propTypes are used to type check the props.....eg; age:PropTypes.number
+//defaultProps are used to set default values for the props
+
+
+import Student from './Student.jsx'
+
 function App() {
  
   //return statements only return single elements, so if there are multiple add a fragment <></> to wrap them
@@ -19,6 +28,12 @@ function App() {
       <Food/>
       <Card/>
       <Card/>
+      {/*if its string use "" , if not use {} */}
+      <Student name = "Manu" age ={30} isStudent={true}/>
+      <Student name = "chi" age ={40} isStudent={false}/>
+      <Student name = "lili" age ={50} isStudent={false}/>
+      <Student name = "sandy" age ={25} isStudent={true}/>
+      <Student name="larry"/>
       <Button/>
       <Button1/>
       <Footer/>
