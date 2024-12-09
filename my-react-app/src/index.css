@@ -42,5 +42,27 @@
 
 .student p{
   margin: 0;
-  
+
 }
+
+.welcome-message{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.5em;
+  color: #745454;
+  margin: 0;
+  border-radius: 20px;
+  padding:10px;
+  background-color: rgb(204, 204, 147);
+}
+
+.login-prompt{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.5em;
+  color: #814c4c;
+  margin: 0;
+  border-radius: 20px;
+  padding:10px;
+  background-color: rgb(223, 223, 193);
+}
+
+

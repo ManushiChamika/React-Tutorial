@@ -14,8 +14,11 @@ import Button1 from './Button1.jsx'
 //propTypes are used to type check the props.....eg; age:PropTypes.number
 //defaultProps are used to set default values for the props
 
+//------------------------------------------------------------------
+//conditional rendering is used to render components based on conditions(show, hide or change components)
 
 import Student from './Student.jsx'
+import UserGreeting from './UserGreeting.jsx'
 
 function App() {
  
@@ -23,6 +26,8 @@ function App() {
   return(  
     <>{/*fragment*/}
       <Header/>
+      <UserGreeting isLoggedIn ={true} username="Manu"/>
+      {/* <UserGreeting isLoggedIn ={true}/> */}
       <Food/>
       {/*can multiply*/}
       <Food/>
@@ -34,11 +39,12 @@ function App() {
       <Student name = "lili" age ={50} isStudent={false}/>
       <Student name = "sandy" age ={25} isStudent={true}/>
       <Student name="larry"/>
+      
       <Button/>
       <Button1/>
       <Footer/>
     </>
-    
+
   );
 }
 
