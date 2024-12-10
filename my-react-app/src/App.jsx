@@ -23,6 +23,19 @@ import List from './List.jsx'
 
 function App() {
  
+  //putting {} in the array makes it an object
+  const fruits =[{id : 1,name: "apple", calories :95},
+                  {id : 2,name: "banana", calories: 67}, 
+                  {id : 3,name:"cherry", calories: 166}, 
+                  {id : 4,name: "date", calories: 55}, 
+                  {id : 5,name: "elderberry", calories: 73}];
+
+  const vegetables =[{id : 6,name: "carrot", calories :45},
+                    {id : 7,name: "potato", calories: 60}, 
+                    {id : 8,name:"beetroot", calories: 106}, 
+                    {id : 9,name: "spinach", calories: 55}, 
+                    {id : 10,name: "onion", calories: 73}];
+
   //return statements only return single elements, so if there are multiple add a fragment <></> to wrap them
   return(  
     <>{/*fragment*/}
@@ -40,7 +53,13 @@ function App() {
       <Student name = "lili" age ={50} isStudent={false}/>
       <Student name = "sandy" age ={25} isStudent={true}/>
       <Student name="larry"/>
-      <List/>
+      {/* <List/> */}
+
+      {/* conditional rendering */}
+      {/* null means if there is nothing in the array, it will not render */}
+      {/* {fruits.length > 0 ? <List items ={fruits} category="fruits"/> : null } */}
+      {fruits.length > 0 && <List items ={fruits} category="Fruits"/>} {/*only true statement given known as short circuiting */}
+      {vegetables.length > 0 ? <List items ={vegetables} category="Vegetables"/> : null}
       <Button/>
       <Button1/>
       <Footer/>

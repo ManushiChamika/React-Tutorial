@@ -65,4 +65,29 @@
   background-color: rgb(223, 223, 193);
 }
 
+.list-category{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.5em;
+  color: #8a8484;
+  margin: 0;
+  border-radius: 20px;
+  padding:10px;
+  background-color: rgb(226, 226, 219);
+  margin: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.list-items{
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1em;
+  color: hsl(200, 50%, 50%);
+  border-radius: 20px;
+  padding:20px;
+  background-color: rgb(230, 230, 184);
+  margin: 20px;
+  font-weight: bold;
+  text-align: justify;
+}
 
