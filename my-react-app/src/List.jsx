@@ -36,6 +36,7 @@ List.defaultProps = {
     // items ={fruits}, if in case the array is missing , we can set a default value, so we don't get an error
     items: []
 }
+
 //type checking the props
 //good practice to type check the props
 List.propTypes = {
@@ -45,4 +46,5 @@ List.propTypes = {
                                             calories: propTypes.number.isRequired
     }))
 }
+
 export default List;

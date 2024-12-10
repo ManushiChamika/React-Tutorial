@@ -20,6 +20,8 @@ import Button1 from './Button1.jsx'
 import Student from './Student.jsx'
 import UserGreeting from './UserGreeting.jsx'
 import List from './List.jsx'
+import Button2 from './Button2.jsx'
+import ProfilePicture from './ProfilePicture.jsx'
 
 function App() {
  
@@ -41,6 +43,7 @@ function App() {
     <>{/*fragment*/}
       <Header/>
       <UserGreeting isLoggedIn ={true} username="Manu"/>
+      <ProfilePicture/>
       {/* <UserGreeting isLoggedIn ={true}/> */}
       <Food/>
       {/*can multiply*/}
@@ -62,6 +65,7 @@ function App() {
       {vegetables.length > 0 ? <List items ={vegetables} category="Vegetables"/> : null}
       <Button/>
       <Button1/>
+      <Button2/>
       <Footer/>
     </>
 
