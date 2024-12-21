@@ -53,7 +53,7 @@ function MyComponent(){
         setCount(c => c + 1);
 
     }
-    
+
     function decrement(){
         setCount(c=> c - 1);    
         setCount(c=> c - 1);    
@@ -63,6 +63,30 @@ function MyComponent(){
     function reset(){
         //no need updater function in this
         setCount(0);
+    }
+
+    //---------------------------------------------------------
+    //update objects in state
+
+    const [car, setCar] = useState({year: 2024, make : "ford" , model : "mustang"});
+
+    //change the above information dynamically through the below functions
+    function handleYearChange(event){
+        //... using this to copy the existing object and then update the year
+        //...c = current car object
+        //...c = ({...c, year: event.target.value}) = copy the current object and update the year
+        //helps keep the default state
+        //... called the spread operator
+        setCar(c => ({...c, year: event.target.value}));
+
+    }
+    function handleMakeChange(event){
+        setCar(c => ({...c, make: event.target.value}));
+        
+    }
+    function handleModelChange(event){
+        setCar(c => ({...c, model: event.target.value}));
+        
     }
 
     //---------------------------------------------------------
@@ -86,6 +110,8 @@ function MyComponent(){
     function handleShippingChange(event){
         setShipping(event.target.value);
     }
+
+
 
     return (<div>
         <p>Name: {name}</p>
@@ -135,6 +161,13 @@ function MyComponent(){
             <button onClick={decrement}>Decrement</button>
             <button onClick={reset}>Reset</button>
             <button onClick={increment}>Increment</button>
+
+
+        {/* update objects in state */}
+        <p>Your favorite car is: {car.year} {car.make} {car.model}</p>
+        <input type= "number" value={car.year} onChange = {handleYearChange}/><br/>
+        <input type= "text" value={car.make}  onChange = {handleMakeChange}/><br/>
+        <input type= "text" value={car.model}  onChange = {handleModelChange}/><br/>
 
     </div>
 
