@@ -91,6 +91,34 @@ function MyComponent(){
 
     //---------------------------------------------------------
 
+    //-----------------------------------------------------------
+    //arrays in state
+
+    const [foods, setFoods] = useState(["Apple", "Banana", "Orange"]);
+
+    function handleAddFood(){
+        const newFood = document.getElementById("foodInput").value;
+        //reset the input field
+        document.getElementById("foodInput").value = "";
+
+        //using the spread operator to copy the existing array and add the new food
+        //----------------------------------------------
+        // setFoods([...foods, newFood]);
+        //----------------------------------------------
+        //the above represents something like this below
+        //setFoods(["Apple", "Banana", "Orange", newFood]);
+        //to make it easier we use the spread operator
+
+        //use updater function
+        setFoods(f => [...f, newFood]);
+    }
+    function handleRemoveFood(index){
+        //_ is used to represent ignored values
+        setFoods(foods.filter((_, i) => i!== index));
+    }
+
+
+    //-----------------------------------------------------------
     function handleNameChange(event){
         pSetName(event.target.value);
     }
@@ -169,6 +197,16 @@ function MyComponent(){
         <input type= "text" value={car.make}  onChange = {handleMakeChange}/><br/>
         <input type= "text" value={car.model}  onChange = {handleModelChange}/><br/>
 
+
+        {/* arrays in state */}
+        <h2>List of foods</h2>
+        <ul>
+            {foods.map((food, index) => <li key={index} onClick={() => handleRemoveFood(index)}>
+                                            {food}
+                                        </li>)}
+        </ul>
+        <input type="text" id="foodInput" placeholder="Enter food name"/>
+        <button onClick={handleAddFood}> Add Food </button>
     </div>
 
 
